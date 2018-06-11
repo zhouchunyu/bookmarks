@@ -5,13 +5,26 @@
 a {
   text-decoration: none;
 }
-kbd {
-  border: 1px solid red;
-  width: 4em;
-  height: 4em;
-  display: inline-block;
+.row {
+  margin: 16px;
+}
+.row > .kbd {
+  margin: 0 5px;
+}
+.kbd {
   text-transform: uppercase;
   position: relative;
+  width: 50px;
+  height: 40px;
+  background: linear-gradient(to bottom, #292929 0%,#111111 100%);
+  color: #D0D0D0;
+  border-radius: 6px;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 0px 1px #3A3A3A, 0 0 0px 2px #1A1B1C, 0 3px 0 2px #000000;
+  font-family: Helvetica;
 }
 kbd > button {
   position: absolute;
@@ -26,9 +39,9 @@ main{
   text-align: center;
 }
 #main > div:nth-child(2) {
-  margin-left: 2em;
+  margin-left: -10px;
 }
 
 #main > div:nth-child(3) {
-  margin-left: 4em;
+  margin-left: -70px;
 }

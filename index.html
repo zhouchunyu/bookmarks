@@ -11,7 +11,8 @@
   <header>
   </header>
   <main>
-    <div id='main'></div>
+    <div id='main'>
+    </div>
   </main>
   <footer></footer>
   <script>
@@ -37,12 +38,14 @@
     index = 0
     while(index < keys.length){
       rowDiv = document.createElement('div')
+      rowDiv.className += 'row'
       main.appendChild(rowDiv)
       row = keys[index]
       column = 0
       while(column < keys[index].length){
         kbd = document.createElement('kbd')
         kbd.textContent = row[column]
+        kbd.className += 'kbd'
         button = document.createElement('button')
         button.textContent = '编辑'
         button.id = row[column]
