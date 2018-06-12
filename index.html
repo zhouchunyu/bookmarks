@@ -12,6 +12,7 @@
   </header>
   <main>
     <div id='main'>
+      <div id='wrapper' class="wrapper"></div>
     </div>
   </main>
   <footer></footer>
@@ -39,7 +40,7 @@
     while(index < keys.length){
       rowDiv = document.createElement('div')
       rowDiv.className += 'row'
-      main.appendChild(rowDiv)
+      wrapper.appendChild(rowDiv)
       row = keys[index]
       column = 0
       while(column < keys[index].length){

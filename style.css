@@ -2,14 +2,19 @@
   margin: 0;
   padding: 0;
 }
+
+body {
+  background: grey url(images/sky.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
 a {
   text-decoration: none;
 }
 .row {
-  margin: 16px;
+  margin: 20px;
 }
 .row > .kbd {
-  margin: 0 5px;
+  margin: 0 10px;
 }
 .kbd {
   text-transform: uppercase;
@@ -35,13 +40,23 @@ kbd > button {
 kbd:hover > button{
   display: inline-block;
 }
-main{
+#main{
   text-align: center;
-}
-#main > div:nth-child(2) {
-  margin-left: -10px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-#main > div:nth-child(3) {
-  margin-left: -70px;
+.wrapper{
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50px;
+  display: inline-block;
+}
+.wrapper > div:nth-child(2) {
+  margin-left: -22px;
+}
+.wrapper > div:nth-child(3) {
+  margin-left: -80px;
 }
