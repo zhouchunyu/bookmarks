@@ -25,19 +25,30 @@ a {
   color: #D0D0D0;
   border-radius: 6px;
   border: none;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  display: inline-block;
   box-shadow: 0 0 0px 1px #3A3A3A, 0 0 0px 2px #1A1B1C, 0 3px 0 2px #000000;
   font-family: Helvetica;
+  position: relative;
 }
-kbd > button {
+.kbd img {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  left: 4px;
+  bottom: 0px;
+}
+.kbd > .text {
+  position: absolute;
+  left: 4px;
+  top: 0px;
+}
+.kbd > button {
   position: absolute;
   right: 0;
   bottom: 0;
   display: none;
 }
-kbd:hover > button{
+.kbd:hover > button{
   display: inline-block;
 }
 #main{

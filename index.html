@@ -45,7 +45,10 @@
       column = 0
       while(column < keys[index].length){
         kbd = document.createElement('kbd')
-        kbd.textContent = row[column]
+        span = document.createElement('span')
+        span.className += 'text'
+        span.textContent = row[column] 
+        kbd.appendChild(span)
         kbd.className += 'kbd'
         button = document.createElement('button')
         button.textContent = '编辑'
@@ -57,6 +60,11 @@
           localStorage.setItem('customWebsites', JSON.stringify(hash));
         }
         kbd.appendChild(button)
+        if(hash[row[column]] != undefined){
+          img = document.createElement('img')
+          img.src = `http://${hash[row[column]]}/favicon.ico`
+          kbd.appendChild(img)
+        }
         rowDiv.appendChild(kbd)
         column += 1
       }
