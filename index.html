@@ -28,13 +28,17 @@
       'w': 'weibo.com',
       'e': 'ele.me',
       'r': 'people.com.cn',
-      't': 'tianya.com',
+      't': 'tianya.cn',
       'y': 'youtube.com',
-      'u': 'uc.com',
+      'u': 'youku.com',
       'i': 'iqiyi.com'
     }
-    websites = localStorage.getItem('customWebsites')
-    websites = JSON.parse(websites || '{}')
+
+    function getLocalStorage(name) {
+      JSON.parse(localStorage.getItem(name) || '{}')
+    }
+
+    websites = getLocalStorage('customWebsites')
     hash = Object.assign({}, hash, websites)
     index = 0
     while(index < keys.length){
@@ -45,26 +49,30 @@
       column = 0
       while(column < keys[index].length){
         kbd = document.createElement('kbd')
+        kbd.className += 'kbd'
         span = document.createElement('span')
         span.className += 'text'
         span.textContent = row[column] 
         kbd.appendChild(span)
-        kbd.className += 'kbd'
+        img = document.createElement('img')
+        img.onerror = function(event) {
+          event.target.src = 'images/dot.png'
+        }
+        img.src = `http://${hash[row[column]]}/favicon.ico`
+        kbd.appendChild(img)
         button = document.createElement('button')
         button.textContent = '编辑'
         button.id = row[column]
         button.onclick = function(event){
-          key = event.target.id
+          button = event.target
+          key = button.id
           address = prompt('绑定一个网址')
           hash[key] = address
-          localStorage.setItem('customWebsites', JSON.stringify(hash));
+          localStorage.setItem('customWebsites', JSON.stringify(hash))
+          img = button.previousSibling
+          img.src = `http://${address}/favicon.ico`
         }
         kbd.appendChild(button)
-        if(hash[row[column]] != undefined){
-          img = document.createElement('img')
-          img.src = `http://${hash[row[column]]}/favicon.ico`
-          kbd.appendChild(img)
-        }
         rowDiv.appendChild(kbd)
         column += 1
       }
