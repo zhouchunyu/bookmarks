@@ -8,11 +8,12 @@ var hash = {
   'q': 'qq.com',
   'w': 'weibo.com',
   'e': 'ele.me',
-  'r': 'people.com.cn',
+  'r': 'ruanyifeng.com/blog',
   't': 'tianya.cn',
   'y': 'youtube.com',
   'u': 'youku.com',
-  'i': 'iqiyi.com'
+  'i': 'iqiyi.com',
+  'z': 'zhihu.com'
 }
 
 function getLocalStorage(name) {
