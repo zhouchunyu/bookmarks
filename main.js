@@ -5,15 +5,18 @@ var keys = [
 ]
 // 初始化网站hash
 var hash = {
-  'q': 'qq.com',
+  'q': 'quora.com',
   'w': 'weibo.com',
   'e': 'ele.me',
-  'r': 'ruanyifeng.com/blog',
+  'r': 'ruby-china.com',
   't': 'tianya.cn',
   'y': 'youtube.com',
   'u': 'youku.com',
   'i': 'iqiyi.com',
-  'z': 'zhihu.com'
+  'a': 'acfun.cn',
+  'f': 'ruanyifeng.com/blog',
+  'z': 'zhihu.com',
+  'b': 'bilibili.com'
 }
 
 function getLocalStorage(name) {
