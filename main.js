@@ -6,15 +6,17 @@ var keys = [
 // 初始化网站hash
 var hash = {
   'q': 'quora.com',
-  'w': 'weibo.com',
+  'w': 'info.cern.ch/hypertext/WWW/TheProject.html',
   'e': 'ele.me',
   'r': 'ruby-china.com',
-  't': 'tianya.cn',
+  't': 'taobao.com',
   'y': 'youtube.com',
   'u': 'youku.com',
   'i': 'iqiyi.com',
   'a': 'acfun.cn',
   'f': 'ruanyifeng.com/blog',
+  'g': 'github.com',
+  'j': 'javascript.ruanyifeng.com',
   'z': 'zhihu.com',
   'b': 'bilibili.com'
 }
